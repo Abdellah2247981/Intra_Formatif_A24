@@ -8,6 +8,9 @@ const USER_KEY = 'user';
   providedIn: 'root',
 })
 export class UserService {
+  isLogged() {
+      return this.currentUser != undefined
+  }
   currentUser?: User;
 
   constructor(public route: Router) {
